@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3a2b433536.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./assets/LF.png">
+    <title>Lucas Ferrari</title>
+</head>
+<body>
+    <!-- Mobile nav toggle button -->
+    <div class="toggleButton d-flex justify-content-center align-items-center">
+        <input type="checkbox" name="toggleMenu" id="toggleMenu">
+
+        <label for="toggleMenu" class="menu">
+            <!-- <i class="far fa-hand-rock"></i>
+            <i class="far fa-hand-paper"></i> -->
+            <img src="./assets/closed-hand.png" alt="closed hand">
+            <img src="./assets/opened-hand.png" alt="opened hand">
+        </label> 
+    </div>
+    
+    <header>
+        <!-- Side navbar -->
+        <div id="profile">
+            <img class="rounded-circle" src="./assets/me.png" alt="Lucas Ferrari">
+            <p class="display-4 fw-bold">Lucas Ferrari</p>
+            <div class="accounts d-flex justify-content-center">
+                <img src="./assets/github.svg" alt="github icon">
+                <img src="./assets/linkedin.svg" alt="linkedin icon">
+            </div>
+        </div>
+
+        <nav id="navbar" class="nav-menu navbar">
+            <ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">
+                        <img src="./assets/home.svg" alt="Home icon">
+                        Home
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">
+                        <img src="./assets/user.svg" alt="user icon">
+                        About
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">
+                        <img src="./assets/skills.svg" alt="skills icon">
+                        Skills
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">
+                        <img src="./assets/code.svg" alt="projects icon">
+                        Projects
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">
+                        <img src="./assets/email.svg" alt="letter icon">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <h1>Lucas Ferrari</h1>
+        <div class="wrapper">
+            <p class="static-text">I'm </p>
+            <ul class="dynamic-texts">
+                <li><span>Developer</span></li>
+                <li><span>Freelancer</span></li>
+                <li><span>Gamer</span></li>
+            </ul>                
+        </div>
+    </section>
+
+    <main data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0">
+        <section id="about">
+
+        </section>
+        <section id="skills">
+
+        </section>
+        <section id="projects">
+
+        </section>
+        <section id="contact">
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Designed by <span>Lucas Ferrari</span></p>
+    </footer>
+
+    <!-- Bundle bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+</body>
+</html>

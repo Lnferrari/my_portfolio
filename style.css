@@ -1,0 +1,199 @@
+:root {
+    font-size: 62.5%;
+}
+
+/* General Styles */
+
+body {
+    width: 100vw;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 130%;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* Toggle Menu */
+
+.toggleButton {
+    width: 40px;
+    height: 40px;
+    padding: 0.5rem;
+
+    background-color: hsla(199, 88%, 55%, 0.7);
+    
+    position: fixed;
+    top: 20px;
+    right: 20px;
+
+    border-radius: 50%;
+}
+
+
+/* Header Styles */
+
+header {
+    width: 300px;
+    height: 100vh;
+    padding: 2rem;
+
+    background-color: black;
+    color: white;
+    /* position: fixed;
+    top: 0;
+    left: -300px;
+    bottom: 0; */
+}
+
+    /* ----- Profile section ----- */
+
+#profile {
+    text-align: center;
+    margin: 1rem auto 2rem;
+}
+
+#profile > img {
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    object-position: center top;
+    object-fit: cover;
+    display: block;
+    /* clip-path: circle(30% at 55% 30%); */
+    /* margin-left: -10px; */
+    border: 10px solid #3d3d3d;
+}
+
+#profile p {
+    margin: 1.5rem auto;
+}
+
+
+.accounts img {
+    width: 36px;
+    margin: 0 1rem;
+    filter: invert(40%);
+}
+
+.accounts img:hover {
+    filter: invert(.5) sepia(1) saturate(5) hue-rotate(175deg);
+}
+
+    /* ----- Navbar section ----- */
+
+#navbar ul {
+    padding-left: 0;
+}
+
+.nav-item {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.nav-menu a {
+    display: flex;
+    align-items: center;
+    color: #ccc;
+    transition: all 0.3s;
+}
+
+.nav-item img {
+    width: 23px;
+    height: 23px;
+    margin-right: 1.2rem;
+    filter: invert(.5);
+    transition: all 0.3s;
+}
+
+.nav-item:hover {
+    transform: scale(1.2);
+}
+
+.nav-item:hover img {
+    filter: invert(.5) sepia(1) saturate(5) hue-rotate(175deg);
+}
+
+.nav-item:hover a {
+    color: white;
+}
+
+/*********END HEADER**********/
+
+/* color: #149ddd; */
+
+
+
+/* MAIN Styles */
+
+
+/* ----- Home Section ----- */
+
+#home {
+    height: 100vh;
+    width: 100vw;
+    background: center / cover no-repeat url(./assets/background.jpg);
+    color: #fff;
+}
+
+.wrapper {
+    display: inline-flex;
+    font-size: 3rem;
+}
+
+.wrapper .static-text {
+
+}
+
+.wrapper .dynamic-texts {
+
+}
+
+.dynamic-texts li {
+    list-style: none;
+}
+
+.dynamic-texts li span::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-left: 2px solid white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER Styles */
+
+footer {
+    padding: 2rem;
+
+    background-color: black;
+    color: white;
+
+    text-align: center;
+}
+
+footer span {
+    
+    font-weight: bold;
+}
+
+
+
+/* Media queries */
