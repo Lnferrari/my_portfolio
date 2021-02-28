@@ -28,7 +28,7 @@ h4, h5, h6 {
     
     position: fixed;
     top: 20px;
-    right: 20px;
+    right: 10%;
 
     border-radius: 50%;
 }
@@ -43,10 +43,10 @@ header {
 
     background-color: black;
     color: white;
-    /* position: fixed;
+    position: fixed;
     top: 0;
     left: -300px;
-    bottom: 0; */
+    bottom: 0;
 }
 
     /* ----- Profile section ----- */
@@ -83,7 +83,11 @@ header {
     filter: invert(.5) sepia(1) saturate(5) hue-rotate(175deg);
 }
 
-    /* ----- Navbar section ----- */
+    /* ----- Side Navbar section ----- */
+
+#navbar {
+    padding-top: 2rem;
+}
 
 #navbar ul {
     padding-left: 0;
@@ -134,16 +138,31 @@ header {
 
 /* ----- Home Section ----- */
 
-#home {
+.hero {
     height: 100vh;
     width: 100vw;
-    background: center / cover no-repeat url(./assets/background.jpg);
+    background: url(./assets/background.jpg) top center;
+    background-size: cover;
+    background-repeat: no-repeat;
     color: #fff;
 }
 
+.hero-text {
+    width: 100%;
+    position: relative;
+    top: 30%;
+    left: 10%;
+    letter-spacing: 1px;
+}
+
+h1,
+.wrapper p,
+.wrapper li {
+    text-shadow: 1px 1px black;
+}
+
 .wrapper {
-    display: inline-flex;
-    font-size: 3rem;
+    
 }
 
 .wrapper .static-text {
@@ -151,23 +170,39 @@ header {
 }
 
 .wrapper .dynamic-texts {
-
+    padding-left: 1rem;
+    overflow: hidden;
+    
 }
 
 .dynamic-texts li {
     list-style: none;
 }
 
-.dynamic-texts li span::after {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    border-left: 2px solid white;
+.dynamic-texts li span {
+    position: relative;
+    border-bottom: 3px solid #149ddd;
 }
 
+.dynamic-texts li span::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background-color: ;
+    border-left: 2px solid white;
+    
+    position: absolute;
+    left: 0;
 
+    animation: typing 1.5s steps(10) infinite;
+}
 
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -40px 0 40px;
+    }
+}
 
 
 
@@ -190,7 +225,6 @@ footer {
 }
 
 footer span {
-    
     font-weight: bold;
 }
 
