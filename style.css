@@ -2,39 +2,24 @@
     font-size: 62.5%;
 }
 
-/* General Styles */
+/* ------ General Styles ------ */
 
 body {
     width: 100vw;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.6rem;
     line-height: 130%;
+    overflow-x: hidden;
 }
 
 h1, h2, h3,
-h4, h5, h6 {
+h4, h5, h6, nav {
     font-family: 'Raleway', sans-serif;
 }
 
+/*-*-*-*-*-*-*-* MOBILE FIRST *-*-*-*-*-*-*-*/
 
-/* Toggle Menu */
-
-.toggleButton {
-    width: 40px;
-    height: 40px;
-    padding: 0.5rem;
-
-    background-color: hsla(199, 88%, 55%, 0.7);
-    
-    position: fixed;
-    top: 20px;
-    right: 10%;
-
-    border-radius: 50%;
-}
-
-
-/* Header Styles */
+/* ------ Header Styles ------ */
 
 header {
     width: 300px;
@@ -43,17 +28,22 @@ header {
 
     background-color: black;
     color: white;
+
     position: fixed;
     top: 0;
-    left: -300px;
+    left: -100vw;
     bottom: 0;
+    z-index: 5;
+
+    transition: all 0.4s ease-in-out;
+    transition-delay: 0.1s;
 }
 
-    /* ----- Profile section ----- */
+    /**** Profile section ****/
 
 #profile {
     text-align: center;
-    margin: 1rem auto 2rem;
+    margin: 2rem auto;
 }
 
 #profile > img {
@@ -65,11 +55,18 @@ header {
     display: block;
     /* clip-path: circle(30% at 55% 30%); */
     /* margin-left: -10px; */
-    border: 10px solid #3d3d3d;
+    border: 10px double #505050;
+    cursor: pointer;
+    transition: all 1s;
 }
 
 #profile p {
-    margin: 1.5rem auto;
+    margin: 1rem auto;
+}
+
+#profile > img:hover {
+    transform: rotateY(180deg);
+    border
 }
 
 
@@ -77,16 +74,17 @@ header {
     width: 36px;
     margin: 0 1rem;
     filter: invert(40%);
+    cursor: pointer;
 }
 
 .accounts img:hover {
     filter: invert(.5) sepia(1) saturate(5) hue-rotate(175deg);
 }
 
-    /* ----- Side Navbar section ----- */
+    /**** Side Navbar section ****/
 
 #navbar {
-    padding-top: 2rem;
+    margin-top: 4rem;
 }
 
 #navbar ul {
@@ -94,7 +92,7 @@ header {
 }
 
 .nav-item {
-    margin: 2rem 0;
+    padding: 1.5rem 0;
     display: flex;
     align-items: center;
     transition: all 0.3s;
@@ -103,8 +101,6 @@ header {
 .nav-menu a {
     display: flex;
     align-items: center;
-    color: #ccc;
-    transition: all 0.3s;
 }
 
 .nav-item img {
@@ -112,7 +108,10 @@ header {
     height: 23px;
     margin-right: 1.2rem;
     filter: invert(.5);
-    transition: all 0.3s;
+}
+
+.nav-item a {
+    color: #bbb;
 }
 
 .nav-item:hover {
@@ -127,56 +126,117 @@ header {
     color: white;
 }
 
-/*********END HEADER**********/
+
+/* ---------END HEADER--------- */
+
+/**** Toggle Button ****/
+
+#toggleInput {
+    display: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.toggleButton {
+    width: 40px;
+    height: 40px;
+    padding: 2.5rem;
+
+    background-color: #149dddbb;
+    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    position: fixed;
+    top: 3%;
+    right: 2%;
+
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.toggleButton > img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+}
+
+.toggleButton > img:last-child {
+    opacity: 0;
+}
+
+
+
+    /**** ToggleButton(checked) ****/
+
+#toggleInput:checked ~ header {
+    left: 0;
+    transition: left 0.15s ease-in-out;
+}
+
+#toggleInput:checked ~ .toggleButton > img:last-child {
+    opacity: 1;
+}
+
+#toggleInput:checked ~ .toggleButton > img:first-child {
+    opacity: 0;
+}
+
 
 /* color: #149ddd; */
 
 
 
-/* MAIN Styles */
+/* ----- MAIN Styles ------ */
 
 
-/* ----- Home Section ----- */
+/**** Hero Section ****/
 
 .hero {
     height: 100vh;
     width: 100vw;
-    background: url(./assets/background.jpg) top center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) ), center / cover no-repeat url(./assets/background.jpg);
     color: #fff;
 }
 
-.hero-text {
-    width: 100%;
+/* .hero-text {
+    width: fit-content;
+    padding: 1.5rem;
     position: relative;
-    top: 30%;
-    left: 10%;
+    top: 35%;
+    left: 23%;
     letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 3.3rem;
+    margin-bottom: 0;
+}
+.wrapper p,
+.wrapper span {
+    font-size: 3.3rem;
 }
 
 h1,
 .wrapper p,
 .wrapper li {
     text-shadow: 1px 1px black;
+    line-height: normal;
 }
 
-.wrapper {
-    
-}
-
-.wrapper .static-text {
-
-}
 
 .wrapper .dynamic-texts {
     padding-left: 1rem;
+    margin-left: -15px;
+    height: 90px;
     overflow: hidden;
-    
 }
 
 .dynamic-texts li {
     list-style: none;
+    
 }
 
 .dynamic-texts li span {
@@ -195,25 +255,43 @@ h1,
     left: 0;
 
     animation: typing 1.5s steps(10) infinite;
+} */
+
+
+/**** About Section ****/
+
+#about {
+    height: 100vh;
+    width: 100vw;
 }
 
-@keyframes typing {
-    100% {
-        left: 100%;
-        margin: 0 -40px 0 40px;
-    }
+/**** Skills Section ****/
+
+#skills {
+    height: 100vh;
+    width: 100vw;
+}
+
+/**** Projects Section ****/
+
+#projects {
+    height: 100vh;
+    width: 100vw;
+}
+
+/**** Contacts Section ****/
+
+#contact {
+    height: 100vh;
+    width: 100vw;
 }
 
 
+/* ---------END MAIN--------- */
 
 
 
-
-
-
-
-
-/* FOOTER Styles */
+/* ------ FOOTER Styles ------ */
 
 footer {
     padding: 2rem;
@@ -228,6 +306,10 @@ footer span {
     font-weight: bold;
 }
 
+/***** KEYFRAMES *****/
 
 
-/* Media queries */
+
+
+
+/* ------ Media queries ------ */

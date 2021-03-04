@@ -13,26 +13,31 @@
     <title>Lucas Ferrari</title>
 </head>
 <body>
-    <!-- Mobile nav toggle button -->
-    <div class="toggleButton d-flex justify-content-center align-items-center">
-        <input type="checkbox" name="toggleMenu" id="toggleMenu">
 
-        <label for="toggleMenu" class="menu">
-            <!-- <i class="far fa-hand-rock"></i>
-            <i class="far fa-hand-paper"></i> -->
-            <img src="./assets/closed-hand.png" alt="closed hand">
-            <img src="./assets/opened-hand.png" alt="opened hand">
-        </label> 
-    </div>
+    <!-- Mobile nav toggle button -->
+    <input type="checkbox" name="toggleMenu" id="toggleInput">
+
+    <label for="toggleInput" class="toggleButton">
+        <!-- <i class="far fa-hand-rock"></i>
+        <i class="far fa-hand-paper"></i> -->
+        <img src="./assets/closed-hand.png" alt="closed hand">
+        <img src="./assets/opened-hand2.png" alt="opened hand">
+    </label> 
     
     <header>
+        
         <!-- Side navbar -->
         <div id="profile">
             <img class="rounded-circle" src="./assets/me.png" alt="Lucas Ferrari">
             <p class="display-4 fw-bold">Lucas Ferrari</p>
             <div class="accounts d-flex justify-content-center">
-                <img src="./assets/github.svg" alt="github icon">
+                <a href="https://github.com/Lnferrari" target="_blank">
+                    <img src="./assets/github.svg" alt="github icon">
+                </a>
+                <a href="www.linkedin.com/in/lucas-ferrari-84574a206
+                " target="_blank">
                 <img src="./assets/linkedin.svg" alt="linkedin icon">
+            </a>
             </div>
         </div>
 
@@ -41,63 +46,71 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#home">
                         <img src="./assets/home.svg" alt="Home icon">
-                        Home
+                        <span>Home</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#about">
                         <img src="./assets/user.svg" alt="user icon">
-                        About
+                        <span>About</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#skills">
                         <img src="./assets/skills.svg" alt="skills icon">
-                        Skills
+                        <span>Skills</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#projects">
                         <img src="./assets/code.svg" alt="projects icon">
-                        Projects
+                        <span>Projects</span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contact">
                         <img src="./assets/email.svg" alt="letter icon">
-                        Contact
+                        <span>Contact</span>
                     </a>
                 </li>
             </ul>
         </nav>
+
     </header>
 
     <section id="home" class="hero">
-        <div class="hero-text flex-column align-items-center py-5 px-3">
-            <h1 class="fw-bold display-3">Lucas Ferrari</h1>
-            <div class="wrapper d-inline-flex display-3">
+
+        <!-- <div class="hero-text flex-column align-items-center py-5 px-3">
+            <h1 class="fw-bold">Lucas Ferrari</h1>
+            <div class="wrapper d-inline-flex">
                 <p class="static-text">I'm</p>
                 <ul class="dynamic-texts">
                     <li><span>Developer</span></li>
                     <li><span>Freelancer</span></li>
                 </ul>
             </div>
-        </div>
+        </div> -->
+
     </section>
 
     <main data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0">
+    
         <section id="about">
-
+            <h2>About</h2>
         </section>
+
         <section id="skills">
-
+            <h2>Skills</h2>
         </section>
+
         <section id="projects">
-
+            <h2>Projects</h2>
         </section>
+
         <section id="contact">
-
+            <h2>Contact</h2>
         </section>
+
     </main>
 
     <footer class="d-flex justify-content-center align-items-center">
