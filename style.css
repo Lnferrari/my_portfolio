@@ -13,9 +13,30 @@ body {
 }
 
 h1, h2, h3,
-h4, h5, h6, nav {
+h4, h5, h6 {
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
+
+h2 {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+h4 {
+    padding-bottom: .5rem;
+}
+
+
+section {
+    padding: 6rem 1rem;
+}
+
+.container {
+    padding: 1.5rem;
+}
+
+
 
 /*-*-*-*-*-*-*-* MOBILE FIRST *-*-*-*-*-*-*-*/
 
@@ -66,7 +87,7 @@ header {
 
 #profile > img:hover {
     transform: rotateY(180deg);
-    border
+
 }
 
 
@@ -197,7 +218,7 @@ header {
 .hero {
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0) ), center / cover no-repeat url(./assets/background.jpg);
+    background: linear-gradient(to right, rgba(0, 0, 0, 8), rgba(0, 0, 0, 0) ), center / cover no-repeat url(./assets/background.jpg);
     color: #fff;
 }
 
@@ -284,6 +305,84 @@ h1,
 #contact {
     height: 100vh;
     width: 100vw;
+}
+
+.wrapper-text {
+    padding-bottom: 2rem;
+}
+
+.skills-content, .row-skills {
+    display: flex;
+    flex-direction: column;
+}
+
+.skill {
+    padding: 1.5rem 0;
+    text-transform: uppercase;
+}
+
+.skill h4 {
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.skill h4 > span {
+    transition-delay: 1s;
+}
+
+.progress-bar-wrapper {
+    width: 100%;
+    height: 2rem;
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    width: 80%;
+    height: 100%;
+    background-image: #149ddd;
+    border-radius: 5px;
+    
+    animation: progress 3s forwards;
+    
+    position: relative;
+}
+
+.progress-bar::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(-45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-size: 50px 50px;
+    animation: loading .6s linear infinite;
+
+}
+
+@keyframes progress {
+    from {
+        width: 0%;
+    }
+
+    to {
+        width: 80%;
+    }
+}
+
+@keyframes loading {
+    from {
+        background-position: 0;
+    }
+
+    to {
+        background-position: 50px;
+    }
 }
 
 
