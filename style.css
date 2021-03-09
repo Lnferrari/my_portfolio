@@ -21,7 +21,7 @@ h4, h5, h6 {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4rem;
 }
 
 h2 {
@@ -254,71 +254,109 @@ header {
     width: 100%;
     height: 100vh;
     background: linear-gradient(to right, rgba(0, 0, 0, .6), rgba(0, 0, 0, 0) ), center / cover no-repeat url(./assets/background.jpg);
-    color: #fff;
+    
     background-attachment: fixed;
     z-index: 5;
+
+    display: flex;
+    flex-direction: column;
 }
 
-/* .hero-text {
+.hero-text {
     width: fit-content;
     padding: 1.5rem;
+    
     position: relative;
     top: 35%;
-    left: 23%;
+    left: 10%;
     letter-spacing: 1px;
 }
 
-h1 {
-    font-size: 3.3rem;
-    margin-bottom: 0;
-}
-.wrapper p,
-.wrapper span {
-    font-size: 3.3rem;
+.hero h2 {
+    display: flex;
+    font-size: 4rem;
+    font-weight: normal;
 }
 
 h1,
-.wrapper p,
-.wrapper li {
-    text-shadow: 1px 1px black;
+.hero h2 {
+    text-shadow: 0px 0px 2px black;
     line-height: normal;
+    color: #fff;
 }
 
+.hero h2 > span:first-child {
+    margin-right: .8rem;
+}
 
-.wrapper .dynamic-texts {
-    padding-left: 1rem;
-    margin-left: -15px;
-    height: 90px;
+.text-1 {
+    animation: text1;
+}
+.text-2 {
+    animation: text2;
+}
+
+.text-1,
+.text-2 {
     overflow: hidden;
-}
-
-.dynamic-texts li {
-    list-style: none;
-    
-}
-
-.dynamic-texts li span {
+    white-space: nowrap;
+    display: inline-block;
     position: relative;
-    border-bottom: 3px solid #149ddd;
+    animation-duration: 10s;
+    animation-timing-function: steps(10, end);
+    animation-iteration-count: infinite;
+}
+.text-1::after,
+.text-2::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    animation: caret infinite;
+    animation-duration: .8s;
+    animation-timing-function: steps(1, end);
 }
 
-.dynamic-texts li span::after {
-    content: "";
-    height: 100%;
-    width: 100%;
-    background-color: ;
-    border-left: 2px solid white;
-    
-    position: absolute;
-    left: 0;
+@keyframes text2 {
 
-    animation: typing 1.5s steps(10) infinite;
-} */
+    0%,
+    50%,
+    100% {
+      width: 0;
+      
+    }
+    60%,
+    90% {
+      width: 5.5em;
+      border-bottom: 2px solid #dd1414d0;
+    }
+}
 
+@keyframes text1 {
 
+    0%,
+    50%,
+    100% {
+      width: 0;
+    }
 
+    10%,
+    40% {
+      width: 5.3em;
+      border-bottom: 2px solid #dd1414d0;
+    }
+}
 
+@keyframes caret {
 
+    0%,
+    100% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 1;
+    }
+  }
 
 /* ----- MAIN Styles ------ */
 
@@ -714,6 +752,11 @@ footer span {
 
 @media (min-width: 768px) {
 
+    /* HERO SECTION */
+    .hero-text {
+        left: 20%;
+    }
+
     /* ABOUT SECTION */
     .about-content {
         display: grid;
@@ -793,6 +836,11 @@ footer span {
     /* GENERAL STYLES */
     section {
         padding-top: 4rem;
+    }
+
+    /* HERO SECTION */
+    .hero-text {
+        left: 25%;
     }
 
     /* SKILLS SECTION */
@@ -909,7 +957,7 @@ footer span {
     #navbar {
         margin-top: 5rem;
     }
-
+    
     /* SKILLS SECTION */
 
     .languages-skills {
